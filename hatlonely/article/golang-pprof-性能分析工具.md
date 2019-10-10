@@ -63,7 +63,7 @@ go tool pprof -svg ./pprof_runtime cpu.pprof.201801301415 > cpu.svg
 
 注意这个工具依赖于 graphviz 工具，Mac 上可用 `brew install graphviz`，centos `yum install graphviz` 即可
 
-![性能分析图](/img/stats/pprof_runtime_cpu.png)
+![性能分析图](/img/pprof_runtime_cpu.png)
 
 ### http 接口
 
@@ -96,7 +96,7 @@ export PATH=$PATH:/path/to/FlameGraph
 go-torch --binaryname=./pprof_runtime --binaryinput=cpu.pprof.201801301415
 ```
 
-![性能分析图](/img/stats/pprof_runtime_cpu_torch.svg)
+![性能分析图](/img/pprof_runtime_cpu_torch.svg)
 
 ### 参考链接
 

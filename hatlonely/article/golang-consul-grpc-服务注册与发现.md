@@ -8,7 +8,7 @@ tags: [golang, consul, grpc, 服务注册与发现, 健康检查, 微服务]
 
 ### 总体架构
 
-![服务注册与发现](/img/architecture/service_register_and_find.png)
+![服务注册与发现](/img/service_register_and_find.png)
 
 - 服务调用: client 直连 server 调用服务
 - 服务注册: 服务端将服务的信息注册到 consul 里

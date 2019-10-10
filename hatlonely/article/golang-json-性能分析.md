@@ -112,7 +112,7 @@ BenchmarkUnMarshalCodecJsonWithBufio-4        500000          3417 ns/op
 BenchmarkUnMarshalJsonparser-4               2000000           877 ns/op
 ```
 
-![golang_json_performance](/img/stats/golang_json_performance.png)
+![golang_json_performance](/img/golang_json_performance.png)
 
 从上面的结果可以看出来：
 
