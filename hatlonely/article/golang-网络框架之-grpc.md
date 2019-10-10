@@ -2,7 +2,6 @@
 title: golang 网络框架之 grpc
 date: 2018-02-03 14:49:30
 tags: [golang, 网络框架, grpc, 微服务]
-thumbnail: /img/thumbnail/moon1.jpg
 ---
 
 grpc 是 google 开源的一款网络框架，具有极好的性能，可能是目前性能最好的网络框架，支持流式 rpc，可以很方便地构建消息订阅发布系统，支持几乎所有主流的语言，使用上面也很简单，公司很多服务基于 grpc 框架构建，运行非常稳定

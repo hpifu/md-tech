@@ -2,7 +2,6 @@
 title: 几种实用的 pythonic 语法
 date: 2018-02-04 20:02:22
 tags: [python, pythonic, 语法糖]
-thumbnail: /img/thumbnail/my_fair_lady.jpg
 ---
 
 python 是一门简单而优雅的语言，可能是过于简单了，不用花太多时间学习就能使用，其实 python 里面还有一些很好的特性，能大大简化你代码的逻辑，提高代码的可读性

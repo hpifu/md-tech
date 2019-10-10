@@ -2,7 +2,6 @@
 title: golang 面向对象特性
 date: 2018-06-19 16:54:26
 tags: [golang, 面向对象, 接口, 继承, 多态, 组合, 覆盖, interface]
-thumbnail: /img/thumbnail/elephant.jpg
 ---
 
 和其他高级语言一样，golang 也支持面向对象编程，支持得比较简单，有些特性并不支持，但是够用了

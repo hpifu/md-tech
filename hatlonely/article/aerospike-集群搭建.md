@@ -2,7 +2,6 @@
 title: aerospike 集群搭建
 date: 2018-06-02 18:36:09
 tags: [aerospike, kv存储, 数据库]
-thumbnail: /img/thumbnail/this_is_fighting_robots.jpg
 ---
 
 aerospike 是一个分布式的 kv 存储服务，与 redis，memcached 等相比，最大的特点是支持内存和磁盘的混合存储，并且对 ssd 的支

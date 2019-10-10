@@ -2,7 +2,6 @@
 title: golang orm 框架之 gorm
 date: 2018-02-08 14:28:09
 tags: [golang, orm, gorm, 数据库, mysql]
-thumbnail: /img/thumbnail/onepiece2.jpg
 ---
 
 最近在想给这个小站增加点赞和评论功能，第三方系统又有各种限制，就想自己弄个后端，实现类似的功能，对于个人来说，数据量不是很大，单机的 mysql 足够存下所有数据，mysql 作为底层存储是个不错的选择

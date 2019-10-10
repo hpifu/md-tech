@@ -2,7 +2,6 @@
 title: golang slice 和 string 重用
 date: 2018-03-17 15:34:40
 tags: [golang, slice, string, 重用, 性能优化]
-thumbnail: /img/thumbnail/cloud.jpg
 ---
 
 相比于 c/c++，golang 的一个很大的改进就是引入了 gc 机制，不再需要用户自己管理内存，大大减少了程序由于内存泄露而引入的 bug，但是同时 gc 也带来了额外的性能开销，有时甚至会因为使用不当，导致 gc 成为性能瓶颈，所以 golang 程序设计的时候，应特别注意对象的重用，以减少 gc 的压力。而 slice 和 string 是 golang 的基本类型，了解这些基本类型的内部机制，有助于我们更好地重用这些对象

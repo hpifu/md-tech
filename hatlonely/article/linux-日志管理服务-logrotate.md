@@ -2,7 +2,6 @@
 title: linux 日志管理服务 logrotate
 date: 2018-04-16 14:14:54
 tags: [linux, logrotate, 日志]
-thumbnail: /img/thumbnail/slam_dunk.jpg
 ---
 
 logrotate 是操作系统用来管理日志的工具，支持日志的切割、压缩、清理以及邮件报警等，通过 crontab 服务定时运行，也可以用这个工具来管理我们自己的服务日志，只需要简单配置下配置文件即可

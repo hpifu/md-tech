@@ -2,7 +2,6 @@
 title: 基于 aws 的 vpn 服务器搭建
 date: 2018-03-04 13:53:58
 tags: [vpn, aws]
-thumbnail: /img/thumbnail/terrace.jpg
 ---
 
 搭 vpn 的原因主要有两个：

@@ -2,7 +2,6 @@
 title: logstash mysql 准实时同步到 elasticsearch
 date: 2018-04-14 21:19:26
 tags: [logstash, mysql, elasticsearch, 数据同步]
-thumbnail: /img/thumbnail/ship2.jpg
 ---
 
 mysql 作为成熟稳定的数据持久化解决方案，广泛地应用在各种领域，但是在数据分析方面稍有不足，而 elasticsearch 作为数据分析领域的佼佼者，刚好可以弥补这项不足，而我们要做的只需要将 mysql 中的数据同步到 elasticsearch 中即可，而 logstash 刚好就可以支持，所有你需要做的只是写一个配置文件而已

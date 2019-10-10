@@ -2,7 +2,6 @@
 title: golang consul-grpc 服务注册与发现
 date: 2018-06-23 21:32:28
 tags: [golang, consul, grpc, 服务注册与发现, 健康检查, 微服务]
-thumbnail: /img/thumbnail/sea.jpg
 ---
 
 在微服务架构里面，每个小服务都是由很多节点组成，节点的添加删除故障希望能对下游透明，因此有必要引入一种服务的自动注册和发现机制，而 consul 提供了完整的解决方案，并且内置了对 GRPC 以及 HTTP 服务的支持

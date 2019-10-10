@@ -2,7 +2,6 @@
 title: golang grpc 负载均衡
 date: 2018-06-23 23:56:57
 tags: [golang, grpc, 负载均衡, load balancer, consul]
-thumbnail: /img/thumbnail/yellow_river.jpg
 ---
 
 微服务架构里面，每个服务都会有很多节点，如果流量分配不均匀，会造成资源的浪费，甚至将一些机器压垮，这个时候就需要负载均衡，最简单的一种策略就是轮询，顺序依次选择不同的节点访问

@@ -2,7 +2,6 @@
 title: cmake 的正确打开方式
 date: 2018-05-30 13:52:50
 tags: [cmake, cmakelists.txt, c++, 构建工具, 单元测试, 依赖管理, makefile]
-thumbnail: /img/thumbnail/grassland.jpg
 ---
 
 用了那么多年 c++，今天才搞明白 cmake 该怎么用……

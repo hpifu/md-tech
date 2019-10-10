@@ -2,7 +2,6 @@
 title: shell 编程
 date: 2018-11-04 01:58:18
 tags: [shell, 编程]
-thumbnail: /img/thumbnail/bird.jpg
 ---
 
 ## 变量

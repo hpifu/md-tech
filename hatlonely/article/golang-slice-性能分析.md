@@ -2,7 +2,6 @@
 title: golang slice 性能分析
 date: 2018-01-18 21:56:24
 tags: [golang, slice, 性能]
-thumbnail: /img/thumbnail/seventy_seven_days.jpg
 avatar: /img/avatar/hatlonely13.png
 ---
 

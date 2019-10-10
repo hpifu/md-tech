@@ -2,7 +2,6 @@
 title: golang 构建工具之 Makefile
 date: 2018-04-11 23:51:44
 tags: [golang, Makefile, 构建工具]
-thumbnail: /img/thumbnail/mountain.jpg
 ---
 
 可能是因为编译太简单了，golang 并没有一个官方的构建工具（类似于 java 的 maven 和 gradle之类的），但是除了编译，我们可能还需要下载依赖，运行测试，甚至像 easyjson，protobuf，thrift 这样的工具下载和代码生成，如果没有构建工具，这些工作就会非常麻烦

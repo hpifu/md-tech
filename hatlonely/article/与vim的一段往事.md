@@ -2,7 +2,6 @@
 title: 与vim的一段往事
 date: 2018-01-21 01:19:15
 tags: [vim, ide]
-thumbnail: /img/thumbnail/vim_keyboard_shortcut_4.jpg
 ---
 
 这就要从大学里面学c语言说起了，那个时候我们还在用古老的 visual c++ 6.0（满满的回忆有木有……），不过我唯一的印象只剩下了，嗯，这个东西真的很丑很难用，不过还好，不久就有了 visual studio 2010，好看是好看了，但是好像卡得不行，也不知道是 windows 的锅呢，还是 vs 的锅呢，还是我电脑配置太低，anyway，这些都不太重要，反正那个时候对 IDE 没有什么好感，再加上英语也不太好，那些软件又都是英文，就更不想用了……

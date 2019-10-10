@@ -2,7 +2,6 @@
 title: golang 性能优化之 bitset 代替 hashset
 date: 2018-04-12 15:04:28
 tags: [golang, bitset, hashset, set, 性能优化, 数据结构]
-thumbnail: /img/thumbnail/ready_player_one.jpg
 ---
 
 hashset 是一种非常高效的数据结构，插入和查询的复杂度都是 O(1)，基本上能满足大部分场景的性能需求，但在一些特殊的场景下，频次非常高的调用依然会成为性能瓶颈（用 pprof 分析），比如广告里面的定向逻辑，在一次请求中过滤逻辑可能会执行上千次，而其中有些过滤刚好都是一些枚举值，比如性别定向，年龄定向等等，对于这种可以用枚举表示的值可以用 bitset 优化，能有20多倍的性能提升

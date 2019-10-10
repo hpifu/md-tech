@@ -2,7 +2,6 @@
 title: gradle 开发语言 groovy 入门
 date: 2018-03-21 16:38:45
 tags: [groovy, gradle, closure]
-thumbnail: /img/thumbnail/cliff.jpg
 ---
 
 gradle 是 java 的构建工具的一种，同类的工具还有 maven，ant。我比较喜欢 gradle 主要是其语法简洁，而且功能强大。除此之外，还支持很多其他语言的构建

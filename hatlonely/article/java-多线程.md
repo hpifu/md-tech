@@ -2,7 +2,6 @@
 title: java 多线程
 date: 2018-03-17 20:48:31
 tags: [java, 多线程, 并发, runnable, thread, callable]
-thumbnail: /img/thumbnail/bridge3.jpg
 ---
 
 java 的多线程有好几种，可以继承 Thread，也可以实现 Runnable 接口，还可以实现 Callable 接口

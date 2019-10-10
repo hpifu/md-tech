@@ -2,7 +2,6 @@
 title: elasticsearch + kibana 集群环境搭建
 date: 2018-04-12 22:06:36
 tags: [elasticsearch, kibana, 日志收集, 日志分析, 环境搭建]
-thumbnail: /img/thumbnail/dusk.jpg
 ---
 
 elk 提供了完备且成熟的日志存储和分析的解决方案，免费开源，本文主要介绍 elasticsearch 集群以及 kibana 的环境搭建

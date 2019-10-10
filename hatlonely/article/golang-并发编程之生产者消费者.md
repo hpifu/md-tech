@@ -2,7 +2,6 @@
 title: golang 并发编程之生产者消费者
 date: 2018-03-11 16:53:07
 tags: [golang, 并发编程, 生产者消费者, 多线程, sync.WaitGroup]
-thumbnail: /img/thumbnail/kid1.jpg
 ---
 
 golang 最吸引人的地方可能就是并发了，无论代码的编写上，还是性能上面，golang 都有绝对的优势

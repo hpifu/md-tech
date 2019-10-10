@@ -2,7 +2,6 @@
 title: golang aws-sdk-go 之 s3 服务
 date: 2018-03-04 18:04:18
 tags: [golang, aws-sdk-go, s3, aws]
-thumbnail: /img/thumbnail/ship.jpg
 ---
 
 s3 是 aws 提供的分布式文件服务，价格比较优惠，经常被用来作为日志的持久化存储，大数据处理结果的输入输出等

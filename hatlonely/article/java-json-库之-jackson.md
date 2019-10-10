@@ -2,7 +2,6 @@
 title: java json 库之 jackson
 date: 2018-03-18 15:15:08
 tags: [java, json, jackson]
-thumbnail: /img/thumbnail/tree2.jpg
 ---
 
 jackson 是一个 java json 库，提供了完备的 json 解析，序列化以及反序列化功能

@@ -2,7 +2,6 @@
 title: hexo + github 博客
 date: 2016-12-21 00:05:50
 tags: [hexo, github, 博客, next]
-thumbnail: /img/thumbnail/elephant2.jpg
 ---
 
 ## 创建 github 仓库

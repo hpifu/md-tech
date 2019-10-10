@@ -2,7 +2,6 @@
 title: golang restful 框架之 go-swagger
 date: 2018-02-08 20:54:48
 tags: [golang, swagger, restful, go-swagger, 微服务, 网络框架]
-thumbnail: /img/thumbnail/parking_lot.jpg
 ---
 
 restful 是这些年的高频词汇了，各大互联网公司也都纷纷推出了自己的 restful api，其实 restful 和 thrift，grpc 类似，就是一种协议，但是这种协议有点特殊的就是使用 http 接口，返回的对象一般是 json 格式，这样有个好处，就是可以供前端的 js 直接调用，使用非常方便，但 http 本身并不是一个高效的协议，后端的内部通信还是使用 grpc 或者 thrift 可以获得更高的性能

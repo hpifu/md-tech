@@ -2,7 +2,6 @@
 title: Mac 必备工具之 brew
 date: 2018-02-21 19:17:31
 tags: [Mac, brew]
-thumbnail: /img/thumbnail/leonthe_professional.jpg
 ---
 
 brew 是 Mac 下的一个包管理工具，类似于 centos 下的 yum，可以很方便地进行安装/卸载/更新各种软件包，例如：nodejs, elasticsearch, kibana, mysql, mongodb 等等，可以用来快速搭建各种本地环境，程序员必备工具

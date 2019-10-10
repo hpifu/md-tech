@@ -2,7 +2,6 @@
 title: 第一次写JD
 date: 2018-01-22 11:06:31
 tags: [程序人生, 招聘]
-thumbnail: /img/thumbnail/job_description.jpg
 ---
 
 有个同学（同事+同学+室友+基友）要离职了（离职的原因，因为爱情，让我们一起祝福他们吧），缺一个人，老大说，你要找个什么样的人，你自己来写JD吧。

@@ -2,7 +2,6 @@
 title: python pandas 数据分析
 date: 2019-01-06 20:05:26
 tags: [python, pandas, 数据分析]
-thumbnail: /img/thumbnail/field2.jpg
 ---
 
 pandas 是一个强大的数据处理库，用这个库，我们可以非常方便地对数据进行加载，抽取，转化，以及输出

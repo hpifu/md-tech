@@ -2,7 +2,6 @@
 title: golang 几种字符串的连接方式
 date: 2018-01-24 13:45:55
 tags: [golang, string]
-thumbnail: /img/thumbnail/genome.jpg
 ---
 
 最近在做性能优化，有个函数里面的耗时特别长，看里面的操作大多是一些字符串拼接的操作，而字符串拼接在 golang 里面其实有很多种实现。

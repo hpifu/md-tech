@@ -2,7 +2,6 @@
 title: 《microservice & serverless》by 蔡超的一点感想
 date: 2018-01-12 21:00:01
 tags: [微服务, 无服务架构, serverless, microservice]
-thumbnail: /img/thumbnail/serverless.png
 ---
 
 超哥是来自Amazon的顶级的架构师，经历了Amazon整个向微服务架构迁移的过程，以及向serverless的演化过程，有着极其丰富的经验，年过40，一直站在技术的最前沿，始终保持对技术的执着追求和热情，是名副其实的技术大牛，能与之一起工作，荣幸之至！今天超哥给我们分享的主题《microservice & serverless》，是超哥实际工作经验的一些分享，也为公司架构的演化提供了新的思路和指导。
