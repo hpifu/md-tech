@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  ${repository}:
+    image: hatlonely/${repository}:${version}
+    hostname: ${repository}
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: none
+    networks:
+      - mysqlnet
+
+networks:
+  mysqlnet:
+    external: true
+    name: mysqlnet
