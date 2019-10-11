@@ -8,7 +8,7 @@ java 的多线程有好几种，可以继承 Thread，也可以实现 Runnable �
 
 ### Thread
 
-``` golang
+``` java
 class MyThread extends Thread {
     private String name;
 
@@ -48,7 +48,7 @@ class MyThread extends Thread {
 
 ### Runnable
 
-``` golang
+``` java
 class MyRunnable implements Runnable {
     private String name;
 
@@ -90,7 +90,7 @@ class MyRunnable implements Runnable {
 
 ### Callable
 
-``` golang
+``` java
 class MyCallable implements Callable<Integer> {
     private Random random;
 
@@ -131,7 +131,7 @@ Callable 接口也只有一个方法 `call`，和 Runnable 不同的是 Callable
 
 ### ThreadPool
 
-``` golang
+``` java
 class MyCallable implements Callable<Integer> {
     private Random random;
 
