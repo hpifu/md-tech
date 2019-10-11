@@ -55,10 +55,12 @@ def main():
         description="""Example:
     python3 mysql.py
 """)
-    parser.add_argument("-i", "--input", default="stdin",
-                        help="input filename")
-    parser.add_argument("-o", "--output", default="stdout",
-                        help="output filename")
+    parser.add_argument(
+        "-i", "--input", default="stdin", help="input filename"
+    )
+    parser.add_argument(
+        "-o", "--output", default="stdout", help="output filename"
+    )
     args = parser.parse_args()
     insert(args.input, args.output)
 
