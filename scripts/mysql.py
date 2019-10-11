@@ -40,8 +40,10 @@ def insert(input="stdin", output="stdout"):
         obj = json.loads(line[:-1])
         with conn.cursor() as cursor:
             cursor.execute(
-                "INSERT INTO articles (title, author, content) VALUES (%s, %s, %s)",
-                (obj["title"], obj["author"], obj["content"])
+                """INSERT INTO articles (title, author, tags, content) VALUES (%s, %s, %s, %s)
+                ON DUPLICATE KEY UPDATE content=VALUES(content), tags=VALUES(tags)
+                """,
+                (obj["title"],  obj["author"], obj["tags"], obj["content"])
             )
         conn.commit()
         ofp.write(line)

@@ -30,6 +30,8 @@ def process(inputdir, author, output="stdout"):
                 article[kv[0].strip()] = ":".join(kv[1:]).strip()
         if "author" not in article:
             article["author"] = author
+        if "tags" not in article:
+            article["tags"] = ""
         print(json.dumps(article))
         fp.close()
 
