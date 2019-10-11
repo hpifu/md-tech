@@ -14,8 +14,8 @@ deploy:
 	# docker service update --network-rm attachable-overlay-network mysqlnet
 	# docker service update --network-add attachable-overlay-network mysql_mysql
 	# docker run -it --network=attachable-overlay-network hatlonely/${repository}:${version}
-	docker jobs create --network=mysqlnet hatlonely/${repository}:${version}
 	# docker stack deploy -c stack.yml ${repository}
+	docker run -it --network host hatlonely/${repository}:${version}
 
 .PHONY: remove
 remove:
