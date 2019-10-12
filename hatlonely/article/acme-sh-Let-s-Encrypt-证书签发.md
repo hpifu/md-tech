@@ -24,17 +24,6 @@ curl https://get.acme.sh | sh
 
 ```
 acme.sh --issue -d blog.hatlonely.com --nginx
-acme.sh --issue -d jenkins.hatlonely.com --nginx
-acme.sh --issue -d gitlab.hatlonely.com --nginx
-acme.sh --issue -d grafana.hatlonely.com --nginx
-acme.sh --issue -d chronograf.hatlonely.com --nginx
-acme.sh --issue -d account.hatlonely.com --nginx
-acme.sh --issue -d api.account.hatlonely.com --nginx
-acme.sh --issue -d api.cloud.hatlonely.com --nginx
-acme.sh --issue -d tool.hatlonely.com --nginx
-acme.sh --issue -d api.ancient.hatlonely.com --nginx
-acme.sh --issue -d ancient.hatlonely.com --nginx
-acme.sh --issue -d game.hatlonely.com --nginx
 ```
 
 ## 安装证书
@@ -44,72 +33,6 @@ mkdir -p /etc/nginx/ssl/blog.hatlonely.com/
 acme.sh --installcert -d blog.hatlonely.com \
         --key-file /etc/nginx/ssl/blog.hatlonely.com/blog.hatlonely.com.key \
         --fullchain-file /etc/nginx/ssl/blog.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/jenkins.hatlonely.com/
-acme.sh --installcert -d jenkins.hatlonely.com \
-        --key-file /etc/nginx/ssl/jenkins.hatlonely.com/jenkins.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/jenkins.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/gitlab.hatlonely.com/
-acme.sh --installcert -d gitlab.hatlonely.com \
-        --key-file /etc/nginx/ssl/gitlab.hatlonely.com/gitlab.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/gitlab.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/grafana.hatlonely.com/
-acme.sh --installcert -d grafana.hatlonely.com \
-        --key-file /etc/nginx/ssl/grafana.hatlonely.com/grafana.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/grafana.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/chronograf.hatlonely.com/
-acme.sh --installcert -d chronograf.hatlonely.com \
-        --key-file /etc/nginx/ssl/chronograf.hatlonely.com/chronograf.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/chronograf.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/account.hatlonely.com/
-acme.sh --installcert -d account.hatlonely.com \
-        --key-file /etc/nginx/ssl/account.hatlonely.com/account.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/account.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/api.account.hatlonely.com/
-acme.sh --installcert -d api.account.hatlonely.com \
-        --key-file /etc/nginx/ssl/api.account.hatlonely.com/api.account.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/api.account.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/api.cloud.hatlonely.com/
-acme.sh --installcert -d api.cloud.hatlonely.com \
-        --key-file /etc/nginx/ssl/api.cloud.hatlonely.com/api.cloud.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/api.cloud.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/tool.hatlonely.com/
-acme.sh --installcert -d tool.hatlonely.com \
-        --key-file /etc/nginx/ssl/tool.hatlonely.com/tool.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/tool.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/api.ancient.hatlonely.com/
-acme.sh --installcert -d api.ancient.hatlonely.com \
-        --key-file /etc/nginx/ssl/api.ancient.hatlonely.com/api.ancient.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/api.ancient.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/ancient.hatlonely.com/
-acme.sh --installcert -d ancient.hatlonely.com \
-        --key-file /etc/nginx/ssl/ancient.hatlonely.com/ancient.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/ancient.hatlonely.com/fullchain.cer \
-        --reloadcmd  "service nginx force-reload"
-
-mkdir -p /etc/nginx/ssl/game.hatlonely.com/
-acme.sh --installcert -d game.hatlonely.com \
-        --key-file /etc/nginx/ssl/game.hatlonely.com/game.hatlonely.com.key \
-        --fullchain-file /etc/nginx/ssl/game.hatlonely.com/fullchain.cer \
         --reloadcmd  "service nginx force-reload"
 ```
 
@@ -152,6 +75,19 @@ server {
     server_name blog.hatlonely.com;
     return 301 https://$server_name$request_uri;
 }
+```
+
+## 常见问题
+
+### 自动更新证书失败
+
+可能是因为 acme.sh 需要更新，可用 `acme.sh --upgrade` 执行更新后再尝试，`acme.sh --upgrade --auto-upgrade` 设置自动更新 acme.sh
+
+### 手动强制更新证书
+
+```
+acme.sh --renew -d blog.hatlonely.com
+acme.sh --renew -d blog.hatlonely.com [--force]
 ```
 
 ## 链接
