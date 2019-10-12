@@ -4,6 +4,7 @@ import argparse
 import pymysql
 import sys
 import json
+import datetime
 
 config = {
     "mysql": {
@@ -40,9 +41,9 @@ def insert(input="stdin", output="stdout"):
         obj = json.loads(line[:-1])
         with conn.cursor() as cursor:
             cursor.execute("""
-            INSERT INTO articles (title, author, tags, content, ctime) VALUES (%s, %s, %s, %s, %s)
-            ON DUPLICATE KEY UPDATE content=VALUES(content), tags=VALUES(tags), ctime=VALUES(ctime)""", (
-                obj["title"],  obj["author"], obj["tags"], obj["content"], obj["date"]
+            INSERT INTO articles (title, author, tags, content, ctime, utime) VALUES (%s, %s, %s, %s, %s, %s)
+            ON DUPLICATE KEY UPDATE content=VALUES(content), tags=VALUES(tags), ctime=VALUES(ctime), utime=VALUES(utime)""", (
+                obj["title"],  obj["author"], obj["tags"], obj["content"], obj["date"], datetime.datetime.now()
             ))
         conn.commit()
         ofp.write(line)
