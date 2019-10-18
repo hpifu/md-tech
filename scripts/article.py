@@ -6,7 +6,7 @@ import os
 import json
 
 
-def process(inputdir, author, output="stdout"):
+def process(inputdir, author, author_id, output="stdout"):
     if output == "stdout":
         ofp = sys.stdout
     else:
@@ -32,6 +32,7 @@ def process(inputdir, author, output="stdout"):
             article["author"] = author
         if "tags" not in article:
             article["tags"] = ""
+        article["authorID"] = author_id
         print(json.dumps(article))
         fp.close()
 
@@ -51,8 +52,11 @@ def main():
     parser.add_argument(
         "-a", "--author", default="hatlonely", help="author name"
     )
+    parser.add_argument(
+        "-u", "--author-id", type=int, default=0, help="author id"
+    )
     args = parser.parse_args()
-    process(args.inputdir, args.author, args.output)
+    process(args.inputdir, args.author, args.author_id, args.output)
 
 
 if __name__ == "__main__":
