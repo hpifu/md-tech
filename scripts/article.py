@@ -32,6 +32,10 @@ def process(inputdir, author, author_id, output="stdout"):
             article["author"] = author
         if "tags" not in article:
             article["tags"] = ""
+        if article["tags"].startswith("["):
+            article["tags"] = ",".join([
+                i.strip() for i in article["tags"].strip("[]").split(",")
+            ])
         article["authorID"] = author_id
         print(json.dumps(article))
         fp.close()

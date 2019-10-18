@@ -4,6 +4,7 @@ import argparse
 import pymysql
 import sys
 import json
+import datetime
 
 config = {
     "mysql": {
@@ -39,27 +40,24 @@ def insert(input="stdin", output="stdout"):
     for line in ifp:
         obj = json.loads(line[:-1])
         with conn.cursor() as cursor:
+            cursor.execute("""
+            INSERT INTO articles (title, author, author_id, tags, content, ctime, utime) VALUES (%s, %s, %s, %s, %s, %s, %s)
+            ON DUPLICATE KEY UPDATE content=VALUES(content), tags=VALUES(tags), ctime=VALUES(ctime), utime=VALUES(utime)""", (
+                obj["title"],  obj["author"], obj["authorID"], obj["tags"], obj["content"], obj["date"], datetime.datetime.now()
+            ))
             cursor.execute(
-                """INSERT INTO articles (title, author, author_id, tags, content) VALUES (%s, %s, %s, %s, %s)
-                ON DUPLICATE KEY UPDATE content=VALUES(content), tags=VALUES(tags)
-                """, (
-                    obj["title"],  obj["author"],
-                    obj["authorID"], obj["tags"], obj["content"]
-                )
-            )
-            cursor.execute(
-                """
-                SELECT id FROM articles WHERE title=%s AND author_id=%s
-                """,
+                "SELECT id FROM articles WHERE title=%s AND author_id=%s",
                 (obj["title"], obj["authorID"])
             )
             id = cursor.fetchone()["id"]
-            print(id)
             for tag in obj["tags"].split(","):
-                print(tag)
+                cursor.execute(
+                    "INSERT INTO tags (tag, article_id) VALUES (%s, %s) ON DUPLICATE KEY UPDATE tag=VALUES(tag)",
+                    (tag, id)
+                )
 
         conn.commit()
-        # ofp.write(line)
+        ofp.write(line)
         ofp.flush()
     ofp.close()
 
