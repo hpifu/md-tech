@@ -41,9 +41,9 @@ def insert(input="stdin", output="stdout"):
         obj = json.loads(line[:-1])
         with conn.cursor() as cursor:
             cursor.execute("""
-            INSERT INTO articles (title, author, author_id, tags, content, brief, ctime, utime) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO articles (title, author_id, tags, content, brief, ctime, utime) VALUES (%s, %s, %s, %s, %s, %s, %s)
             ON DUPLICATE KEY UPDATE content=VALUES(content), brief=VALUES(brief), tags=VALUES(tags), ctime=VALUES(ctime), utime=VALUES(utime)""", (
-                obj["title"],  obj["author"], obj["authorID"], obj["tags"], obj["content"], obj["brief"], obj["date"], datetime.datetime.now()
+                obj["title"], obj["authorID"], obj["tags"], obj["content"], obj["brief"], obj["date"], datetime.datetime.now()
             ))
             cursor.execute(
                 "SELECT id FROM articles WHERE title=%s AND author_id=%s",
