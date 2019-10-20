@@ -36,6 +36,7 @@ def process(inputdir, author, author_id, output="stdout"):
             article["tags"] = ",".join([
                 i.strip() for i in article["tags"].strip("[]").split(",")
             ])
+        article["brief"] = article["content"].replace("#", "").replace(" ", "").replace("`", "").replace("\n", "")[:60]
         article["authorID"] = author_id
         print(json.dumps(article))
         fp.close()
