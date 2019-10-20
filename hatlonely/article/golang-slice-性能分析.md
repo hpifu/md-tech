@@ -2,7 +2,7 @@
 title: golang slice 性能分析
 date: 2018-01-18 21:56:24
 tags: [golang, slice, 性能]
-avatar: /img/hatlonely13.png
+avatar: hatlonely13.png
 ---
 
 golang 在 gc 这块的做得比较弱，频繁地申请和释放内存会消耗很多的资源。另外 slice 使用数组实现，有一个容量和长度的问题，当 slice 的容量用完再继续添加元素时需要扩容，而这个扩容会把申请新的空间，把老的内容复制到新的空间，这是一个非常耗时的操作。有两种方式可以减少这个问题带来的性能开销：

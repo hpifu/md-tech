@@ -12,7 +12,7 @@ admob 是 google 的移动开发者广告平台，同样也提供了完备的 ap
 
 报表 api 使用 oauth 2.0 授权，需要先开通云平台账号，需要填一下账单信息。开通账号后，在平台上创建一个 oauth 2.0 的凭证
 
-![google oauth 授权](/img/google_create_oauth.jpg)
+![google oauth 授权](google_create_oauth.jpg)
 
 创建完成后，`下载JSON` 秘钥文件，保存为 `client_secrets.json`
 

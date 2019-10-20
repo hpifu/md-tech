@@ -35,7 +35,7 @@ markdown 其实就是一种标记语言，类似于 html，但是比 html 简单
 > 引用
 
 [链接点这里](http://xxx.com)
-![图片链接](/img/xxx.jpg)
+![图片链接](xxx.jpg)
 &lt;http://xxx.com&gt;
 
 | header1 | header2 | header3 |
