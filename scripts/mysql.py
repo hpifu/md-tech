@@ -55,9 +55,9 @@ def insert(input="stdin", output="stdout"):
                     "INSERT INTO tags (tag, article_id) VALUES (%s, %s) ON DUPLICATE KEY UPDATE tag=VALUES(tag)",
                     (tag, id)
                 )
-
+            obj["id"] = id
         conn.commit()
-        ofp.write(line)
+        ofp.write(json.dumps(obj) + "\n")
         ofp.flush()
     ofp.close()
 
