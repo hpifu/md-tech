@@ -4,7 +4,7 @@ date: 2019-10-21 08:25:35
 tags: [golang, grpc]
 ---
 
-最近遇到 grpc 客户端报错 "rpc error: code = Unavailable desc = transport is closing"，原因是连接长时间没有使用，被服务端断开，这种情况通过简单粗暴的重试策略可以解决，更加优雅的解决方案是增加保持连接策略
+最近遇到 grpc 客户端报错 `rpc error: code = Unavailable desc = transport is closing`，原因是连接长时间没有使用，被服务端断开，这种情况通过简单粗暴的重试策略可以解决，更加优雅的解决方案是增加保持连接策略
 
 ## 服务端
 
