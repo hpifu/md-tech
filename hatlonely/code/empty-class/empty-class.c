@@ -24,12 +24,12 @@ int main(int argc, const char* argv[]) {
 
     struct A* a3 = (struct A*)malloc(sizeof(struct A));
     struct A* a4 = (struct A*)malloc(sizeof(struct A));
-    printf("address(a3): %p\n", &a3);
-    printf("address(a4): %p\n", &a4);
-    printf("&a3 == &a4: %d\n", &a3 == &a4);
-    // address(a3): 0x7ffee79bb518
-    // address(a4): 0x7ffee79bb510
-    // &a3 == &a4: 0
+    printf("address(a3): %p\n", a3);
+    printf("address(a4): %p\n", a4);
+    printf("a3 == a4: %d\n", a3 == a4);
+    // address(a3): 0x7f8faac003c0
+    // address(a4): 0x7f8faac02ac0
+    // a3 == a4: 0
     free(a3);
     free(a4);
 }

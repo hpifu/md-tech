@@ -1,5 +1,7 @@
 #include <iostream>
 
+// Apple LLVM version 9.0.0 (clang-900.0.39.2)
+
 class A {};
 
 void func1() {
@@ -17,12 +19,15 @@ void func1() {
 
     A* a3 = new A();
     A* a4 = new A();
-    std::cout << "address(a3): " << &a3 << std::endl;
-    std::cout << "address(a4): " << &a4 << std::endl;
-    std::cout << "&a3 == &a4: " << (&a3 == &a4) << std::endl;
-    // address(a3): 0x7ffee84b8498
-    // address(a4): 0x7ffee84b8490
-    // &a3 == &a4: 0
+    std::cout << "address(a3): " << a3 << std::endl;
+    std::cout << "address(a4): " << a4 << std::endl;
+    std::cout << "a3 == a4: " << (a3 == a4) << std::endl;
+    // address(a3): 0x7fa020c003c0
+    // address(a4): 0x7fa020c02ac0
+    // a3 == a4: 0
+
+    delete a3;
+    delete a4;
 }
 
 class B {

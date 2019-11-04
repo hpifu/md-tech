@@ -3,3 +3,6 @@ c++:
 
 c:
 	gcc empty-class.c && ./a.out && rm a.out
+
+go:
+	go run empty-class.go
