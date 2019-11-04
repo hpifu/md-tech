@@ -12,6 +12,7 @@ int main(int argc, const char* argv[]) {
     printf("address(a1): %p\n", &a1);
     printf("address(a2): %p\n", &a2);
     printf("&a1 == &a2: %d\n", &a1 == &a2);
+    printf("&a1 == &a1: %d\n", &a1 == &a1);
     // address(a1): 0x7ffee79bb528
     // address(a2): 0x7ffee79bb520
     // &a1 == &a2: 0
