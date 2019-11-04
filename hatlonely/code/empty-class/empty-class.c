@@ -24,4 +24,6 @@ int main(int argc, const char* argv[]) {
     // address(a3): 0x7ffee79bb518
     // address(a4): 0x7ffee79bb510
     // &a3 == &a4: 0
+    free(a3);
+    free(a4);
 }
