@@ -39,6 +39,8 @@ networks:
     name: consulnet
 ```
 
+部署成功后，可以通过 `http://127.0.0.1:8500/ui/` 访问 consul ui
+
 ## 链接
 
 - github consul: <https://github.com/hashicorp/consul>
