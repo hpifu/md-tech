@@ -1,7 +1,7 @@
 ---
 title: docker etcd 环境搭建
 date: 2019-11-07 16:58:32
-tags: [docker, etcd, 环境搭建]
+tags: [docker, etcd, 环境搭建, 分布式]
 ---
 
 etcd 是用 golang 编写，raft 协议实现的分布式高可靠的 kv 存储系统，常用来作为配置共享和服务注册发现，Kubernetes 就使用 etcd 来保存整个集群的状态
@@ -102,7 +102,7 @@ e3w 管理的 kv 是目录格式的，且所有的 key 都带有根目录前缀�
 - github ui 界面 e3w: <https://github.com/soyking/e3w>
 - etcd 配置: <https://github.com/etcd-io/etcd/blob/master/Documentation/op-guide/configuration.md>
 - etcd 命令行界面: <https://github.com/etcd-io/etcd/tree/master/etcdctl>
-- etcd 环境完整代码参考: <https://github.com/hatlonely/docker-etcd>
-- e3w 环境完整代码参考: <https://github.com/hatlonely/docker-e3w>
+- etcd 环境完整代码参考: <https://github.com/hpifu/docker-etcd>
+- e3w 环境完整代码参考: <https://github.com/hpifu/docker-e3w>
 - docker etcd 镜像: <https://hub.docker.com/r/bitnami/etcd>
 - docker e3w 镜像: <https://hub.docker.com/r/soyking/e3w>
